@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Cart</title>
+    <style>
+        .products {
+            display: flex;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+  <h1>Product card</h1>
+
+<h2>Cart: <span id="count">0</span></h2>
+
+<div class="products">
+    <div class="product">
+        <h3>Product 1</h3>
+        <button onclick="add()">Add</button>
+    </div>
+
+    <div class="product">
+        <h3>Product 2</h3>
+        <button onclick="add()">Add</button>
+    </div>
+
+    <div class="product">
+        <h3>Product 3</h3>
+        <button onclick="add()">Add</button>
+    </div>
+</div>
+
+<script>
+    let c = 0;
+    function add() {
+        c++;
+        document.getElementById("count").textContent = c;
+    }
+</script>
+
+</body>
+</html>

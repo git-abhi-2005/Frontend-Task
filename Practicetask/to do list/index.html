@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1>TO DO LIST</h1>
+</head>
+<body>
+
+<input id="inp"><button onclick="add()">Add</button>
+<ul id="list"></ul>
+
+<script>
+function add(){
+  if(!inp.value) return;
+  list.innerHTML += `<li><input type="checkbox" onclick="this.parentElement.style.textDecoration=this.checked?'line-through':'none'"> ${inp.value}</li>`;
+  inp.value="";
+}
+</script>
+
+</body>
+</html>
